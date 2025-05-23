@@ -1,3 +1,6 @@
+<?php
+require_once '../server/dbcon.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
