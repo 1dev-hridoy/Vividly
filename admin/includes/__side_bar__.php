@@ -7,6 +7,12 @@
       </a>
     </li>
     <li class="nav-item">
+      <a href="carousel.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'carousel.php') ? 'active' : ''; ?>">
+      <i class="fa fa-images"></i>
+        <p>Carousel</p>
+      </a>
+    </li>
+    <li class="nav-item">
       <a href="category.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'category.php') ? 'active' : ''; ?>">
         <i class="nav-icon fas fa-list"></i>
         <p>Category</p>

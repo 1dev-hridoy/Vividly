@@ -4,53 +4,8 @@ require_once './includes/__header__.php';
    <!-- Hero Carousel -->
 <?php
 require_once './includes/components/__carousel__.php';
+require_once './includes/components/___category__.php';
 ?>
-
-    <!-- Categories Section -->
-    <section class="category-section py-5">
-  <div class="container">
-    <div class="row row-cols-2 row-cols-md-4 g-4">
-      
-      <div class="col">
-        <div class="category-card h-100 text-center">
-          <div class="category-img mb-3">
-            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Women">
-          </div>
-          <h3 class="category-title">Women</h3>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="category-card h-100 text-center">
-          <div class="category-img mb-3">
-            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80" alt="Men">
-          </div>
-          <h3 class="category-title">Men</h3>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="category-card h-100 text-center">
-          <div class="category-img mb-3">
-            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Accessories">
-          </div>
-          <h3 class="category-title">Accessories</h3>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="category-card h-100 text-center">
-          <div class="category-img mb-3">
-            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=720&q=80" alt="Shoes">
-          </div>
-          <h3 class="category-title">Shoes</h3>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 
 
 
