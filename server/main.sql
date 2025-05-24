@@ -8,4 +8,12 @@ CREATE TABLE admins (
 );
 
 INSERT INTO admins (name, email, password, created_at) 
-VALUES ('hridoy09bg', 'hridoy@gmail.com', '$2y$10$wHpoZ4HHsUwzZy.kf6ZtE.QjP64CldpdWDjTbhJ4XU9OvGbKvhQZG', '2025-05-23 19:56:18');
+VALUES ('hridoy09bg', 'hridoy@gmail.com', '$2y$10$BY6uFabgmHxr9GOqK/ju.OXoWWu3tzxa2c391YikCkX4DPHIpi.0i', '2025-05-23 19:56:18');
+
+
+CREATE TABLE category (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    image VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

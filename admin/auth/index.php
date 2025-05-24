@@ -1,6 +1,7 @@
 <?php
-require_once '../../server/dbcon.php';
+session_start();
 
+require_once '../../server/dbcon.php';
 if (isset($_SESSION['admin_id'])) {
     header("Location: ../");
     exit();
@@ -16,32 +17,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $admin = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($admin && password_verify($password, $admin['password'])) {
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
+            
+            session_regenerate_id(true);
+            
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_name'] = $admin['name'];
             $_SESSION['admin_email'] = $admin['email'];
-            $_SESSION['login_time'] = date('Y-m-d H:i:s'); 
+            $_SESSION['login_time'] = date('Y-m-d H:i:s');
             
-            if (isset($_POST['remember'])) {
-                setcookie('admin_email', $email, time() + (86400 * 30), "/"); 
+            if (isset($_POST['remember']) && $_POST['remember'] === 'on') {
+                setcookie('admin_email', $email, time() + (86400 * 30), "/");
+                setcookie('admin_id', $admin['id'], time() + (86400 * 30), "/", "", true, true);
             }
             
             header('Content-Type: application/json');
-            echo json_encode(['success' => true]);
+            echo json_encode([
+                'success' => true,
+                'message' => 'Login successful',
+                'redirect' => '../'
+            ]);
             exit();
         } else {
-            header('Content-Type: application/json');
-            echo json_encode(['success' => false, 'error' => 'Invalid credentials']);
-            exit();
+            throw new Exception('Invalid credentials');
         }
-    } catch(PDOException $e) {
+    } catch(Exception $e) {
         header('Content-Type: application/json');
-        echo json_encode(['success' => false, 'error' => 'Database error']);
+        echo json_encode([
+            'success' => false,
+            'error' => $e->getMessage()
+        ]);
         exit();
     }
 }
 
 $current_utc = gmdate('Y-m-d H:i:s');
-$current_user = 'hridoy09bg'; 
+$current_user = isset($_SESSION['admin_email']) ? $_SESSION['admin_email'] : 'Guest';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,7 +121,6 @@ $current_user = 'hridoy09bg';
     </div>
 </div>
 
-<!-- Current Date/Time and User Info -->
 <div class="current-info">
     <div>Current UTC: <?php echo $current_utc; ?></div>
     <div>User: <?php echo htmlspecialchars($current_user); ?></div>
@@ -178,22 +190,17 @@ $(document).ready(function() {
                         window.location.href = '../';
                     }, 2000);
                 } else {
-                    
                     Swal.close();
-                    
-                
                     toastr.error(response.error || 'An error occurred', 'Error');
                 }
             },
             error: function() {
-              
                 Swal.close();
                 toastr.error('An error occurred while processing your request', 'Error');
             }
         });
     });
 
-    // Check for error parameter in URL and show Toastr message
     <?php if (isset($_GET['error'])): ?>
         toastr.error('<?php echo htmlspecialchars($_GET['error']); ?>', 'Error');
     <?php endif; ?>

@@ -1,6 +1,10 @@
 <?php
+
+require_once './includes/check_auth.php';
 require_once './includes/__navbar__.php';
 require_once './includes/__side_bar__.php';
+
+ob_end_flush();
 ?>
 
 <div class="content-wrapper">
