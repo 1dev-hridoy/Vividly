@@ -1,1 +1,0 @@
-[2025-05-25 13:01:40] Dashboard error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gender' in 'field list'

@@ -184,3 +184,59 @@ CREATE TABLE payments (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
+
+
+
+-- Site Settings Table
+CREATE TABLE site_settings (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    site_name VARCHAR(100) NOT NULL,
+    site_description TEXT,
+    site_logo VARCHAR(255),
+    footer_tagline VARCHAR(255),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Social Links Table
+CREATE TABLE social_links (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    facebook_url VARCHAR(255),
+    twitter_url VARCHAR(255),
+    instagram_url VARCHAR(255),
+    linkedin_url VARCHAR(255),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Contact Info Table
+CREATE TABLE contact_info (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    phone_number VARCHAR(20),
+    address TEXT,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Payment Info Table
+CREATE TABLE payment_info (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    bkash_number VARCHAR(20),
+    bkash_note VARCHAR(100),
+    nagad_number VARCHAR(20),
+    nagad_note VARCHAR(100),
+    rocket_number VARCHAR(20),
+    rocket_note VARCHAR(100),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Sample Data
+INSERT INTO site_settings (site_name, site_description, site_logo, footer_tagline) VALUES
+    ('My E-Commerce Store', 'Your one-stop shop for everything', 'uploads/logo_20250525_1006.png', '© 2025 Your Company. All rights reserved.');
+
+INSERT INTO social_links (facebook_url, twitter_url, instagram_url, linkedin_url) VALUES
+    ('https://facebook.com/hridoy', 'https://twitter.com/hridoy', 'https://instagram.com/hridoy', 'https://linkedin.com/in/hridoy');
+
+INSERT INTO contact_info (phone_number, address) VALUES
+    ('+8801234567890', '123 Main St, Dhaka, Bangladesh');
+
+INSERT INTO payment_info (bkash_number, bkash_note, nagad_number, nagad_note, rocket_number, rocket_note) VALUES
+    ('+8801712345678', 'Send as Personal', '+8801812345678', 'Use for payment only', '+8801912345678', 'Add order ID in reference');
+
