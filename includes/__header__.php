@@ -20,7 +20,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Shop</title>
+    <title><?php echo htmlspecialchars($settings['site_name']); ?></title>
     <meta name="description" content="<?php echo htmlspecialchars($settings['site_description']); ?>">
     <meta property="og:site_name" content="<?php echo htmlspecialchars($settings['site_name']); ?>">
 
@@ -37,7 +37,10 @@ try {
     <div class="container">
         <a class="navbar-brand" href="#">
             <?php if (!empty($settings['site_logo'])): ?>
-                <img src="<?php echo htmlspecialchars('storage/' . $settings['site_logo']); ?>" alt="Logo" height="40">
+                <a href="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST']); ?>">
+  <img src="<?php echo htmlspecialchars('storage/' . $settings['site_logo']); ?>" alt="Logo" height="40">
+</a>
+
             <?php else: ?>
                 <?php echo htmlspecialchars($settings['site_name']); ?>
             <?php endif; ?>
