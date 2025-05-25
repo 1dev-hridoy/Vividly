@@ -15,3 +15,31 @@
                      (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
               FROM products p
               LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []
+[2025-05-25 13:04:08] Executed product query: SELECT p.id, p.title, p.price, p.stock, c.name AS category_name, 
+                     (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
+              FROM products p
+              LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []
+[2025-05-25 13:04:17] Executed product query: SELECT p.id, p.title, p.price, p.stock, c.name AS category_name, 
+                     (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
+              FROM products p
+              LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []
+[2025-05-25 13:04:23] Executed product query: SELECT p.id, p.title, p.price, p.stock, c.name AS category_name, 
+                     (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
+              FROM products p
+              LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []
+[2025-05-25 13:06:09] Executed product query: SELECT p.id, p.title, p.price, p.stock, c.name AS category_name, 
+                     (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
+              FROM products p
+              LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []
+[2025-05-25 13:06:29] Executed product query: SELECT p.id, p.title, p.price, p.stock, c.name AS category_name, 
+                     (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
+              FROM products p
+              LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []
+[2025-05-25 13:08:00] Executed product query: SELECT p.id, p.title, p.price, p.stock, c.name AS category_name, 
+                     (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
+              FROM products p
+              LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []
+[2025-05-25 13:08:08] Executed product query: SELECT p.id, p.title, p.price, p.stock, c.name AS category_name, 
+                     (SELECT pi.image_path FROM product_images pi WHERE pi.product_id = p.id AND pi.image_type = 'main' LIMIT 1) AS main_image
+              FROM products p
+              LEFT JOIN category c ON p.category_id = c.id ORDER BY p.created_at DESC LIMIT 10 OFFSET 0 with params: []

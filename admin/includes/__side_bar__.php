@@ -31,6 +31,12 @@
       </a>
     </li>
     <li class="nav-item">
+      <a href="orders.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'orders.php') ? 'active' : ''; ?>">
+      <i class="nav-icon fas fa-shopping-cart"></i>
+        <p>Orders</p>
+      </a>
+    </li>
+    <li class="nav-item">
       <a href="users.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'users.php') ? 'active' : ''; ?>">
         <i class="nav-icon fas fa-users"></i>
         <p>Users</p>

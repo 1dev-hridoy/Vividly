@@ -21,14 +21,26 @@ CREATE TABLE category (
 
 
 
--- 1. Products Table
-CREATE TABLE products (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    short_description TEXT,
-    long_description TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
+-- -- 1. Products Table
+-- CREATE TABLE products (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     title VARCHAR(255) NOT NULL,
+--     short_description TEXT,
+--     long_description TEXT,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- ) ENGINE=InnoDB;
+CREATE TABLE `products` (
+  `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(255) NOT NULL,
+  `short_description` TEXT,
+  `long_description` TEXT,
+  `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `price` DECIMAL(10,2) DEFAULT 0.00,
+  `stock` INT DEFAULT 0,
+  `category_id` INT UNSIGNED,
+  FOREIGN KEY (`category_id`) REFERENCES `categories`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- 2. Sizes Table (Static)
 CREATE TABLE sizes (
