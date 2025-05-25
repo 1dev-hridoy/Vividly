@@ -24,7 +24,7 @@ try {
             <?php else: ?>
                 <?php foreach ($categories as $category): ?>
                     <div class="col">
-                        <a href="products.php?category_id=<?php echo $category['id']; ?>" class="text-decoration-none">
+                        <a href="shop.php?category=<?php echo urlencode($category['name']); ?>" class="text-decoration-none">
                             <div class="category-card h-100 text-center">
                                 <div class="category-img mb-3">
                                     <img class="img-fluid rounded" 

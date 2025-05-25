@@ -19,7 +19,7 @@ require_once '../server/dbcon.php';
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="https://cdn-icons-png.flaticon.com/512/1040/1040254.png" alt="AdminLTELogo" height="60" width="60">
   </div>
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <ul class="navbar-nav">
