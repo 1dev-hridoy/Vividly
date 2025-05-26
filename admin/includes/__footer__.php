@@ -1,9 +1,16 @@
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 1.00
-    </div>
-    <?php echo base64_decode('PHN0cm9uZz5Db3B5cmlnaHQgJmNvcHk7IA==').date(base64_decode('WQ==')).base64_decode('IDxhIGhyZWY9Imh0dHBzOi8vaHJpZG95LnRvcC8iPkhyaWRveTwvYT4uPC9zdHJvbmc+IEFsbCByaWdodHMgcmVzZXJ2ZWQu');?>
-  </footer>
+<footer class="main-footer">
+  <div class="float-right d-none d-sm-block">
+    <b><?php echo 'Version'; ?></b> <?php echo '1.00'; ?>
+  </div>
+  <strong>
+    <?php echo 'Copyright &copy; ' . date("Y") . ' '; ?>
+    <a href="<?php
+ echo "\150\164\164\x70\163\x3a\57\57\150\162\x69\x64\157\171\56\x74\157\x70\57"; ?>"><?php
+ echo "\110\x72\x69\x64\157\171"; ?></a>.
+  </strong>
+  <?php echo 'All rights reserved.'; ?>
+</footer>
+
   <aside class="control-sidebar control-sidebar-dark">
   </aside>
 </div>

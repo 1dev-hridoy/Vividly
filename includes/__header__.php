@@ -51,29 +51,18 @@ try {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST']); ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="shop.php">Shop</a>
                 </li>
             </ul>
             <div class="d-flex ms-3">
-                <a href="#" class="nav-link me-3">
-                    <i class="fas fa-search"></i>
+                <a href="track-order.php" class="nav-link me-3">
+                <i class="fa-solid fa-truck"></i>
                 </a>
-                <a href="#" class="nav-link me-3">
-                    <i class="fas fa-user"></i>
-                </a>
-                <a href="#" class="nav-link position-relative">
+                <a href="cart.php" class="nav-link position-relative">
                     <i class="fas fa-shopping-bag"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        2
                     </span>
                 </a>
             </div>
