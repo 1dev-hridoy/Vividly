@@ -40,7 +40,7 @@ Download the Sketchware Pro project from:
 ## 🎥 Demo Video
 
 Check out the full demo of the project on YouTube:
-**[Watch Demo on YouTube](https://youtu.be/Fvd6JM7pytk)**
+**[Watch Demo on YouTube](https://www.youtube.com/watch?v=Fvd6JM7pytk)**
 
 ---
 
