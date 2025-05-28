@@ -33,14 +33,14 @@ A full-featured web + Android app project for managing and showcasing content, b
 ## 📲 Sketchware Project File
 
 Download the Sketchware Pro project from:
-**[Sketchware Vividly Project Download](#)**
+**[Sketchware Vividly Project Download](https://web.sketchub.in/p/30379)**
 
 ---
 
 ## 🎥 Demo Video
 
 Check out the full demo of the project on YouTube:
-**[Watch Demo on YouTube](#)**
+**[Watch Demo on YouTube](https://youtu.be/Fvd6JM7pytk)**
 
 ---
 
